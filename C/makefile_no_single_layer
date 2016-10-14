@@ -1,0 +1,29 @@
+all: single meta baseline
+single: non_wy wy
+single_nv: non_wy_nv wy_nv
+meta: meta_non_wy
+meta_nv: meta_non_wy_nv
+baseline: baseline_p
+baseline_nv: baseline_nv_p
+non_wy:
+	gcc -DNO_SINGLE_FEATURES -O3 -o compiled/significant_interval_search_exact single_analysis/non_wy/significant_interval_search_exact.c -lm
+	gcc -DNO_SINGLE_FEATURES -O3 -o compiled/significant_interval_search_chi single_analysis/non_wy/significant_interval_search_chi.c -lm
+non_wy_nv:
+	gcc -DNO_SINGLE_FEATURES -DNO_VERBOSE -O3 -o compiled/significant_interval_search_exact single_analysis/non_wy/significant_interval_search_exact.c -lm
+	gcc -DNO_SINGLE_FEATURES -DNO_VERBOSE -O3 -o compiled/significant_interval_search_chi single_analysis/non_wy/significant_interval_search_chi.c -lm
+wy:
+	gcc -DNO_SINGLE_FEATURES -O3 -o compiled/significant_interval_search_wy_exact single_analysis/wy/significant_interval_search_wy_exact.c -lm
+	gcc -DNO_SINGLE_FEATURES -O3 -o compiled/significant_interval_search_wy_chi single_analysis/wy/significant_interval_search_wy_chi.c -lm
+wy_nv:
+	gcc -DNO_SINGLE_FEATURES -DNO_VERBOSE -O3 -o compiled/significant_interval_search_wy_exact single_analysis/wy/significant_interval_search_wy_exact.c -lm
+	gcc -DNO_SINGLE_FEATURES -DNO_VERBOSE -O3 -o compiled/significant_interval_search_wy_chi single_analysis/wy/significant_interval_search_wy_chi.c -lm
+meta_non_wy:
+	gcc -DNO_SINGLE_FEATURES -O3 -o compiled/significant_interval_search_meta_cmh meta_analysis/non_wy/significant_interval_search_meta_cmh.c -lm
+	gcc -DNO_SINGLE_FEATURES -O3 -o compiled/significant_interval_search_meta_fisher meta_analysis/non_wy/significant_interval_search_meta_fisher.c -lm
+meta_non_wy_nv:
+	gcc -DNO_SINGLE_FEATURES -DNO_VERBOSE -O3 -o compiled/significant_interval_search_meta_cmh meta_analysis/non_wy/significant_interval_search_meta_cmh.c -lm
+	gcc -DNO_SINGLE_FEATURES -DNO_VERBOSE -O3 -o compiled/significant_interval_search_meta_fisher meta_analysis/non_wy/significant_interval_search_meta_fisher.c -lm
+baseline_p:
+	gcc -DNO_SINGLE_FEATURES -O3 -o compiled/brute_interval_search_exact baseline/brute_interval_search_exact.c -lm
+baseline_nv_p:
+	gcc -DNO_SINGLE_FEATURES -DNO_VERBOSE -O3 -o compiled/brute_interval_search_exact baseline/brute_interval_search_exact.c -lm
