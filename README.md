@@ -23,6 +23,8 @@ install.packages("fastcmh", dependencies=TRUE)
 ```
 
 
-## Authors
+## Contact
 
-Felipe Llinares Lopez and Dean Bodenham
+Any questions regarding the C code can be directed to Felipe Llinares Lopez: felipe.llinares [at] bsse.ethz.ch  
+
+Any questions regarding the R package can be directed to Dean Bodenham: dean.bodenham [at] bsse.ethz.ch 
