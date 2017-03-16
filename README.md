@@ -1,4 +1,4 @@
-# fastcmh
+# Genetic Heterogeneity Discovery with FastCMH
 
 Implementation in FastCMH algorithm in C and R. The R package `fastcmh` is [on CRAN](https://CRAN.R-project.org/package=fastcmh). The paper can be found [here](https://goo.gl/2QN2La).
 
