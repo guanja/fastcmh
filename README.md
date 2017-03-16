@@ -124,6 +124,16 @@ which will return the following data frame:
 This concludes the description of the data format.
 
 
+## Compiling and running the C code
+
+To compile the C version of the code, enter the `C` folder and run `make`:
+
+```
+cd C
+make
+```
+
+
 
 ## Contact
 
