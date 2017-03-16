@@ -126,6 +126,8 @@ This concludes the description of the data format.
 
 ## Compiling and running the C code
 
+**Note:** The C version of the code uses a python script to filter the final results. Python and the `numpy` module need to be installed.  
+
 To compile the C version of the code, enter the `C` folder and run `make`:
 
 ```
