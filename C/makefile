@@ -27,8 +27,8 @@ meta_non_wy_nv:
 baseline_p:
 	gcc -O3 -o compiled/brute_interval_search_exact baseline/brute_interval_search_exact.c -lm
 	gcc -O3 -o compiled/brute_interval_search_meta_cmh baseline/brute_interval_search_meta_cmh.c -lm
-	gcc -O3 -xCORE-AVX-I -o compiled/significant_interval_search_meta_cmh_no_heuristic baseline/significant_interval_search_meta_cmh_no_heuristic.c -lm
+	gcc -O3 -o compiled/significant_interval_search_meta_cmh_no_heuristic baseline/significant_interval_search_meta_cmh_no_heuristic.c -lm
 baseline_p_nv:
 	gcc -DNO_VERBOSE -O3 -o compiled/brute_interval_search_exact baseline/brute_interval_search_exact.c -lm
 	gcc -DNO_VERBOSE -O3 -o compiled/brute_interval_search_meta_cmh baseline/brute_interval_search_meta_cmh.c -lm
-	icc -DNO_VERBOSE -O3 -o compiled/significant_interval_search_meta_cmh_no_heuristic baseline/significant_interval_search_meta_cmh_no_heuristic.c
+	gcc -DNO_VERBOSE -O3 -o compiled/significant_interval_search_meta_cmh_no_heuristic baseline/significant_interval_search_meta_cmh_no_heuristic.c
