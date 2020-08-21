@@ -19,7 +19,7 @@ wy_nv:
 	gcc -DNO_VERBOSE -O3 -o compiled/significant_interval_search_wy_exact single_analysis/wy/significant_interval_search_wy_exact.c -lm
 	gcc -DNO_VERBOSE -O3 -o compiled/significant_interval_search_wy_chi single_analysis/wy/significant_interval_search_wy_chi.c -lm
 meta_non_wy:
-	gcc -O3 -o compiled/significant_interval_search_meta_cmh meta_analysis/non_wy/significant_interval_search_meta_cmh.c -lm
+	gcc -g -o compiled/significant_interval_search_meta_cmh meta_analysis/non_wy/significant_interval_search_meta_cmh.c -lm
 	gcc -O3 -o compiled/significant_interval_search_meta_fisher meta_analysis/non_wy/significant_interval_search_meta_fisher.c -lm
 meta_non_wy_nv:
 	gcc -DNO_VERBOSE -O3 -o compiled/significant_interval_search_meta_cmh meta_analysis/non_wy/significant_interval_search_meta_cmh.c -lm
